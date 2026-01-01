@@ -1,10 +1,17 @@
+import Image from 'next/image'
+import Link from 'next/link'
+
 function Logo() {
 	return (
-		<div>
-			<h1 className='font-bold text-2xl flex items-center'>
-				<h1>YouFit</h1>
-			</h1>
-		</div>
+		<Link href={'/'}>
+			<Image
+				src='/logotip.png'
+				alt='logo'
+				width={160}
+				height={160}
+				className='rounded-full transition-transform duration-500 lg:hover:scale-105 lg:hover:rotate-6 cursor-pointer'
+			/>
+		</Link>
 	)
 }
 

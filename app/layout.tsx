@@ -1,6 +1,18 @@
 import { ChildProps } from '@/types/types'
 import type { Metadata } from 'next'
+import { Crete_Round, Work_Sans } from 'next/font/google'
 import './globals.css'
+
+const creteRound = Crete_Round({
+	weight: ['400'],
+	subsets: ['latin'],
+	variable: '--font-creteRound',
+})
+const workSans = Work_Sans({
+	weight: ['500', '600'],
+	subsets: ['latin'],
+	variable: '--font-workSans',
+})
 
 export const metadata: Metadata = {
 	title: 'Create Next App',
@@ -10,7 +22,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: ChildProps) {
 	return (
 		<html lang='en'>
-			<body>{children}</body>
+			<body
+				className={`${creteRound.variable} ${workSans.variable} overflow-x-hidden`}
+			>
+				{children}
+			</body>
 		</html>
 	)
 }
