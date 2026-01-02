@@ -1,37 +1,34 @@
+import { Button } from '@/components/ui/button'
+import { ChevronsRight } from 'lucide-react'
 import Image from 'next/image'
 
 function Hero() {
 	return (
 		<div className='max-w-5xl mx-auto mt-24 md:mt-28 max-md:px-3'>
-			<div className='w-full  rounded-3xl overflow-hidden bg-[#E6F57A] relative'>
-				{/* Background circles */}
-				<div className='absolute -top-24 -right-24 w-80 h-80 rounded-full bg-lime-200/50' />
-				<div className='absolute -top-10 -right-10 w-56 h-56 rounded-full bg-lime-300/50' />
+			<div className='w-full rounded-3xl overflow-hidden bg-[#eff5ce] relative'>
+				{/* <div className='w-full  rounded-3xl overflow-hidden bg-[#E6F57A] relative'> */}
 
-				{/* Content */}
-				<div className='relative z-10 flex items-center justify-between p-6 md:p-8'>
-					{/* Left */}
+				<div className='absolute -top-24 -right-24 w-80 h-80 rounded-full bg-gray-100/50' />
+				<div className='absolute -top-10 -right-10 w-56 h-56 rounded-full bg-gray-300/50' />
+				{/* <div className='absolute -top-24 -right-24 w-80 h-80 rounded-full bg-lime-200/50' />
+				<div className='absolute -top-10 -right-10 w-56 h-56 rounded-full bg-lime-300/50' /> */}
+
+				<div className='relative z-10 flex items-center justify-between p-4 md:p-8'>
 					<div className='space-y-4'>
 						<p className='text-sm font-medium text-black/70 font-crete'>
-							Progress
+							Classic body builder
 						</p>
 
 						<div>
 							<h2 className='text-2xl md:text-3xl font-bold text-black'>
-								Lower Body
+								Islom Obidov
 							</h2>
-							<p className='text-sm text-black/70'>Cardio · 10 mins</p>
+							<p className='text-sm text-black/70'>10 yillik tajriba</p>
 						</div>
-
-						{/* Calories */}
-						<div className='flex items-center gap-3 bg-black text-white px-4 py-2 rounded-full w-fit'>
-							<span className='text-lg font-semibold'>538</span>
-							<span className='text-xs tracking-wide'>CALORIES</span>
-
-							<div className='ml-2 w-6 h-6 rounded-full bg-white/20 flex items-center justify-center text-sm'>
-								↗
-							</div>
-						</div>
+						<Button className='rounded-full flex items-center gap-2'>
+							<span>Men haqimda</span>
+							<ChevronsRight className='animate-ping' />
+						</Button>
 					</div>
 
 					{/* Right image */}
@@ -48,8 +45,8 @@ function Hero() {
 				</div>
 
 				{/* Progress circle */}
-				<div className='absolute top-4 right-4 w-12 h-12 rounded-full border-4 border-black/20 flex items-center justify-center'>
-					<span className='text-xs font-semibold text-black'>100%</span>
+				<div className='absolute top-2 right-2 w-9 h-9 rounded-full border-4 border-green-800/20 flex items-center justify-center'>
+					<span className='text-[10px] font-semibold text-black'>100%</span>
 				</div>
 			</div>
 		</div>
