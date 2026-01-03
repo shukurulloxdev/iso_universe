@@ -1,56 +1,69 @@
-import { Button } from '@/components/ui/button'
-import { ChevronsRight } from 'lucide-react'
+'use client'
+
+import { AnimatePresence, motion } from 'framer-motion'
 import Image from 'next/image'
+import { useEffect, useState } from 'react'
 
-function Hero() {
+const images = [
+	'/imgs/nur.webp',
+	'/imgs/hero.png',
+	'/imgs/citi.jpg',
+	'/imgs/tosh.webp',
+	'/imgs/uzbe.jpeg',
+]
+
+export default function Hero() {
+	const [index, setIndex] = useState(0)
+
+	useEffect(() => {
+		const interval = setInterval(() => {
+			setIndex(prev => (prev + 1) % images.length)
+		}, 4000) // 4 sekundda almashadi
+
+		return () => clearInterval(interval)
+	}, [])
+
 	return (
-		<div className='max-w-5xl mx-auto mt-24 md:mt-28 max-md:px-3'>
-			<div className='w-full rounded-3xl overflow-hidden bg-[#eff5ce] relative'>
-				{/* <div className='w-full  rounded-3xl overflow-hidden bg-[#E6F57A] relative'> */}
+		<div className='relative w-full h-[90vh] max-md:h-[65vh] mt-20 overflow-hidden'>
+			{/* Background images */}
+			<AnimatePresence>
+				<motion.div
+					key={index}
+					className='absolute inset-0'
+					initial={{ opacity: 0, scale: 1.09 }}
+					animate={{ opacity: 1, scale: 1 }}
+					exit={{ opacity: 0 }}
+					transition={{ duration: 0.7 }}
+				>
+					<Image
+						src={images[index]}
+						alt='Hero Background'
+						fill
+						className='object-cover'
+						priority
+					/>
+					<div className='absolute inset-0 bg-black/70' />
+				</motion.div>
+			</AnimatePresence>
 
-				<div className='absolute -top-24 -right-24 w-80 h-80 rounded-full bg-gray-100/50' />
-				<div className='absolute -top-10 -right-10 w-56 h-56 rounded-full bg-gray-300/50' />
-				{/* <div className='absolute -top-24 -right-24 w-80 h-80 rounded-full bg-lime-200/50' />
-				<div className='absolute -top-10 -right-10 w-56 h-56 rounded-full bg-lime-300/50' /> */}
+			{/* Content */}
+			<div className='relative z-10 max-w-6xl mx-auto h-full flex max-md:px-3 flex-col justify-center gap-4 text-white'>
+				<span className='bg-orange-600 px-3 py-1 text-sm rounded w-fit'>
+					BBB GROUP
+				</span>
 
-				<div className='relative z-10 flex items-center justify-between p-4 md:p-8'>
-					<div className='space-y-4'>
-						<p className='text-sm font-medium text-black/70 font-crete'>
-							Classic body builder
-						</p>
+				<h1 className='text-2xl md:text-5xl font-bold leading-tight'>
+					Oilaviy baxt va xotirjamlik <br />
+					shu yerdan boshlanadi
+				</h1>
 
-						<div>
-							<h2 className='text-2xl md:text-3xl font-bold text-black'>
-								Islom Obidov
-							</h2>
-							<p className='text-sm text-black/70'>10 yillik tajriba</p>
-						</div>
-						<Button className='rounded-full flex items-center gap-2'>
-							<span>Men haqimda</span>
-							<ChevronsRight className='animate-ping' />
-						</Button>
-					</div>
-
-					{/* Right image */}
-					<div>
-						<Image
-							src='/iso.png'
-							alt='Athlete'
-							width={180}
-							height={240}
-							className='object-contain'
-							priority
-						/>
-					</div>
-				</div>
-
-				{/* Progress circle */}
-				<div className='absolute top-2 right-2 w-9 h-9 rounded-full border-4 border-green-800/20 flex items-center justify-center'>
-					<span className='text-[10px] font-semibold text-black'>100%</span>
-				</div>
+				<p className='md:w-[50%] text-sm text-gray-100'>
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta culpa
+					maxime minus quod quos veritatis expedita ducimus atque unde dolore
+					at, beatae dolorum Perspiciatis, magni mollitia quia ducimus sunt
+					voluptate.
+				</p>
 			</div>
 		</div>
 	)
 }
-
-export default Hero

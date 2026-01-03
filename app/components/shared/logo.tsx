@@ -3,13 +3,12 @@ import Link from 'next/link'
 
 function Logo() {
 	return (
-		<Link href={'/'}>
+		<Link href={'/'} className='relative w-36 h-12 md:w-44 md:h-14'>
 			<Image
-				src='/logotip.png'
+				src='/logo/uz.jpg'
 				alt='logo'
-				width={160}
-				height={160}
-				className='rounded-full transition-transform duration-500 lg:hover:scale-105 lg:hover:rotate-6 cursor-pointer'
+				fill
+				className='transition-transform duration-500 lg:hover:scale-105 lg:hover:rotate-3 cursor-pointer'
 			/>
 		</Link>
 	)
