@@ -5,10 +5,12 @@ import Image from 'next/image'
 import { useEffect, useState } from 'react'
 
 const images = [
-	'/imgs/nur.webp',
+	'/imgs/nurc.webp',
 	'/imgs/hero.png',
+	'/imgs/margilonciti.webp',
 	'/imgs/citi.jpg',
 	'/imgs/tosh.webp',
+	'/imgs/komfort.webp',
 	'/imgs/uzbe.jpeg',
 ]
 
