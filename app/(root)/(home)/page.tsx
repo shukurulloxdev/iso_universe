@@ -1,11 +1,11 @@
 import Hero from './_components/hero'
-import Plans from './_components/plans'
+import Projects from './_components/projects'
 
 function Page() {
 	return (
 		<div className='w-full'>
 			<Hero />
-			<Plans />
+			<Projects />
 		</div>
 	)
 }

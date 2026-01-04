@@ -18,50 +18,52 @@ export default function Hero() {
 	useEffect(() => {
 		const interval = setInterval(() => {
 			setIndex(prev => (prev + 1) % images.length)
-		}, 4000) // 4 sekundda almashadi
+		}, 4000) // zoom 4s + fade 2s
 
 		return () => clearInterval(interval)
 	}, [])
 
 	return (
 		<div className='relative w-full h-[90vh] max-md:h-[65vh] mt-20 overflow-hidden'>
-			{/* Background images */}
-			<AnimatePresence>
+			<AnimatePresence mode='sync'>
 				<motion.div
 					key={index}
 					className='absolute inset-0'
-					initial={{ opacity: 0, scale: 1.09 }}
-					animate={{ opacity: 1, scale: 1 }}
+					initial={{ opacity: 0 }}
+					animate={{ opacity: 1 }}
 					exit={{ opacity: 0 }}
-					transition={{ duration: 0.7 }}
+					transition={{ duration: 0.7 }} // faqat almashishda animatsiya
 				>
-					<Image
-						src={images[index]}
-						alt='Hero Background'
-						fill
-						className='object-cover'
-						priority
-					/>
-					<div className='absolute inset-0 bg-black/70' />
+					{/* ZOOM QATLAMI (CSS) */}
+					<div className='absolute inset-0 animate-[slow-zoom_4s_linear_forwards]'>
+						<Image
+							src={images[index]}
+							alt='Hero Background'
+							fill
+							className='object-cover'
+							priority
+						/>
+					</div>
+
+					<div className='absolute inset-0 bg-black/60' />
 				</motion.div>
 			</AnimatePresence>
 
-			{/* Content */}
+			{/* CONTENT */}
 			<div className='relative z-10 max-w-6xl mx-auto h-full flex max-md:px-3 flex-col justify-center gap-4 text-white'>
 				<span className='bg-orange-600 px-3 py-1 text-sm rounded w-fit'>
 					BBB GROUP
 				</span>
 
-				<h1 className='text-2xl md:text-5xl font-bold leading-tight'>
+				<h1 className='text-2xl md:text-5xl font-bold font-lexend leading-tight'>
 					Oilaviy baxt va xotirjamlik <br />
 					shu yerdan boshlanadi
 				</h1>
 
-				<p className='md:w-[50%] text-sm text-gray-100'>
-					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta culpa
-					maxime minus quod quos veritatis expedita ducimus atque unde dolore
-					at, beatae dolorum Perspiciatis, magni mollitia quia ducimus sunt
-					voluptate.
+				<p className='md:w-[50%] text-sm text-gray-100 font-lexend'>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum
+					dolor sit amet consectetur adipisicing elit. Provident, ea? Cupiditate
+					earum minima a harum dignissimos!
 				</p>
 			</div>
 		</div>

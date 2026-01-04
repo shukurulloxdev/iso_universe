@@ -75,6 +75,18 @@
 .font-crete {
 	font-family: var(--font-creteRound), serif;
 }
+.font-work {
+	font-family: var(--font-workSans), sans-serif;
+}
+.font-roboto {
+	font-family: var(--font-roboto), sans-serif;
+}
+.font-playfair {
+	font-family: var(--font-playfair), serif;
+}
+.font-lexend {
+	font-family: var(--font-lexendDeca), sans-serif;
+}
 @keyframes ring {
 	0% {
 		transform: rotate(0deg);
@@ -107,5 +119,16 @@
 	100% {
 		transform: scale(2.2);
 		opacity: 0;
+	}
+}
+@keyframes slow-zoom {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.08);
+	}
+	100% {
+		transform: scale(1);
 	}
 }
