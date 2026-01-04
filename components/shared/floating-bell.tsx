@@ -25,7 +25,7 @@ import { PhoneCall } from 'lucide-react'
 
 export default function FloatingBell() {
 	return (
-		<div className='fixed bottom-6 right-6 z-50'>
+		<a href='tel:+998902015858' className='fixed bottom-6 right-6 z-50'>
 			{/* Ripple */}
 			<span
 				className='
@@ -50,6 +50,6 @@ export default function FloatingBell() {
 			>
 				<PhoneCall className='w-6 h-6 animate-[ring_1.2s_ease-in-out_infinite]' />
 			</button>
-		</div>
+		</a>
 	)
 }
