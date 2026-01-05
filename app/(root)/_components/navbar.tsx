@@ -1,6 +1,6 @@
 'use client'
 
-import Logo from '@/components/cards/shared/logo'
+import Logo from '@/components/shared/logo'
 import { Button } from '@/components/ui/button'
 import { useEffect, useState } from 'react'
 
