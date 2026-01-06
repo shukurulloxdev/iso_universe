@@ -48,3 +48,93 @@ export const houseProjects = [
 		status: 'Tez kunda',
 	},
 ]
+// data/reviews.ts
+export const reviewsTop = [
+	{
+		id: 1,
+		name: 'Esther Steward',
+		location: 'San Francisco, CA',
+		image: '/imgs/user1.jpg',
+		text: 'Lorem ipsum dolor sit amet, consectetur ',
+	},
+	{
+		id: 2,
+		name: 'Marvin McKinney',
+		location: 'San Francisco, CA',
+		image: '/imgs/user2.jpg',
+		text: 'Pretium id nunc vitae, aliquet .',
+	},
+	{
+		id: 3,
+		name: 'Jenny Wilson',
+		location: 'San Francisco, CA',
+		image: '/imgs/user3.jpg',
+		text: 'Very professional team. Highly recommended.',
+	},
+	{
+		id: 4,
+		name: 'Jenny Wilson',
+		location: 'San Francisco, CA',
+		image: '/imgs/user3.jpg',
+		text: 'Very professional team. Highly recommended.',
+	},
+	{
+		id: 5,
+		name: 'Jenny Wilson',
+		location: 'San Francisco, CA',
+		image: '/imgs/user3.jpg',
+		text: 'Very professional team. Highly recommended.',
+	},
+	{
+		id: 6,
+		name: 'Jenny Wilson',
+		location: 'San Francisco, CA',
+		image: '/imgs/user3.jpg',
+		text: 'Very professional team. Highly recommended.',
+	},
+]
+
+export const reviewsBottom = [
+	{
+		id: 1,
+		name: 'Albert Flores',
+		location: 'San Francisco, CA',
+		image: '/imgs/user4.jpg',
+		text: 'Amazing experience and modern approach.',
+	},
+	{
+		id: 2,
+		name: 'Albert Flores',
+		location: 'San Francisco, CA',
+		image: '/imgs/user4.jpg',
+		text: 'Amazing experience and modern approach.',
+	},
+	{
+		id: 3,
+		name: 'Albert Flores',
+		location: 'San Francisco, CA',
+		image: '/imgs/user4.jpg',
+		text: 'Amazing experience and modern approach.',
+	},
+	{
+		id: 4,
+		name: 'Albert Flores',
+		location: 'San Francisco, CA',
+		image: '/imgs/user4.jpg',
+		text: 'Amazing experience and modern approach.',
+	},
+	{
+		id: 5,
+		name: 'Kristin Watson',
+		location: 'San Francisco, CA',
+		image: '/imgs/user5.jpg',
+		text: 'Design, performance and support – all perfect.',
+	},
+	{
+		id: 6,
+		name: 'Cameron Williamson',
+		location: 'San Francisco, CA',
+		image: '/imgs/user6.jpg',
+		text: 'Top level service and quality.',
+	},
+]

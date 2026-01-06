@@ -1,7 +1,15 @@
 'use client'
 
-import { AlertDialog, AlertDialogContent } from '@/components/ui/alert-dialog'
+import VimeoComp from '@/components/shared/vimeo-comp'
 import { Button } from '@/components/ui/button'
+import {
+	Dialog,
+	DialogContent,
+	DialogDescription,
+	DialogHeader,
+	DialogTitle,
+} from '@/components/ui/dialog'
+import { useVideoStore } from '@/zustand/store/videoStore'
 import { motion } from 'framer-motion'
 import { Play } from 'lucide-react'
 import Image from 'next/image'
@@ -9,7 +17,7 @@ import { useEffect, useState } from 'react'
 import { Cursor, useTypewriter } from 'react-simple-typewriter'
 export default function Hero() {
 	const [showSecond, setShowSecond] = useState(false)
-	const [open, setOpen] = useState(false)
+	const { isOpen, toggleIsOpen } = useVideoStore()
 
 	const [text] = useTypewriter({
 		words: ['Kelajagingizni birga'],
@@ -82,7 +90,7 @@ export default function Hero() {
 							</Button>
 
 							<Button
-								onClick={() => setOpen(true)}
+								onClick={() => toggleIsOpen()}
 								size='lg'
 								className='transition-all duration-300
 		hover:shadow-xl hover:-translate-y-1 	active:translate-y-0.5
@@ -108,20 +116,22 @@ export default function Hero() {
 					</div>
 				</div>
 			</section>
-			<AlertDialog open={open} onOpenChange={setOpen}>
-				<AlertDialogContent>
-					<div className='w-60 h-52'>
-						<iframe
-							className='w-full h-full'
-							src='https://www.youtube.com/watch?v=7DXCey4_J5Q&t=24s'
-							title='YouTube video'
-							frameBorder='0'
-							allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-							allowFullScreen
-						></iframe>
+			<Dialog open={isOpen} onOpenChange={toggleIsOpen}>
+				<DialogContent className='p-9 max-w-[700px]'>
+					<div className='w-full h-full border-2 rounded-lg'>
+						<VimeoComp videoId={1151790083} autoplay />
 					</div>
-				</AlertDialogContent>
-			</AlertDialog>
+					<DialogHeader>
+						<DialogTitle className=' text-orange-600 font-bold text-lg font-lexend'>
+							«BESH BOLA BUILDING`S»
+						</DialogTitle>
+						<DialogDescription>
+							Bu vidyo orqali bizning zamonaviy kompaniyamiz bilan tanishib
+							chiqishingiz mumkun.
+						</DialogDescription>
+					</DialogHeader>
+				</DialogContent>
+			</Dialog>
 		</>
 	)
 }
