@@ -1,13 +1,6 @@
 export const houseProjects = [
 	{
-		name: 'Nafis',
-		location: 'Margilon shahar',
-		volume: 2343,
-		direction: 'Turar joy majmuasi',
-		image: '/imgs/tosh.webp',
-		status: 'Tez kunda',
-	},
-	{
+		slug: '/margiloncity',
 		name: 'Margilon city',
 		location: 'Margilon shahar',
 		volume: 2343,
@@ -16,14 +9,7 @@ export const houseProjects = [
 		status: 'Tez kunda',
 	},
 	{
-		name: 'Komfort',
-		location: 'Fargona shahar',
-		volume: 1483,
-		direction: 'Turar joy majmuasi',
-		image: '/imgs/uzbe.jpeg',
-		status: 'Yakunlangan',
-	},
-	{
+		slug: '/margiloncity',
 		name: 'Nur Kompleks',
 		location: 'Fargona shahar',
 		volume: 1483,
@@ -32,20 +18,13 @@ export const houseProjects = [
 		status: 'Tez kunda',
 	},
 	{
+		slug: '/margiloncity',
 		name: 'Sakinat',
 		location: 'Fargona shahar',
 		volume: 1483,
 		direction: 'Turar joy majmuasi',
 		image: '/imgs/sakinat.webp',
 		status: 'Yakunlangan',
-	},
-	{
-		name: 'Margilon city',
-		location: 'Margilon shahar',
-		volume: 2343,
-		direction: 'Turar joy majmuasi',
-		image: '/imgs/hero.png',
-		status: 'Tez kunda',
 	},
 ]
 // data/reviews.ts
@@ -136,5 +115,82 @@ export const reviewsBottom = [
 		location: 'San Francisco, CA',
 		image: '/imgs/user6.jpg',
 		text: 'Top level service and quality.',
+	},
+]
+
+export const komforts = [
+	{
+		title: 'Katta masjid',
+		description:
+			'Loyihamiz hududida zamonaviy va keng masjid joylashgan bo‘lib, u aholi uchun ibodat va ma’naviy xotirjamlik maskani hisoblanadi. Qulay joylashuvi va shinam muhitida kundalik namozlar hamda jamoaviy ibodatlarni osoyishta tarzda ado etish uchun barcha sharoitlar yaratilgan.',
+		image: '/qulaylik/masjid.png',
+	},
+	{
+		title: 'Yer usti avtoturargohlari',
+		description:
+			'Loyihalarimizda zamonaviy yer usti avtoturargohlar tashkil etilgan bo‘lib, ular avtomobilingizni qulay va tartibli tarzda joylashtirish imkonini beradi. Keng va puxta rejalashtirilgan to‘xtash joylari har kuni qulay foydalanish uchun mo‘ljallangan.,',
+		image: '/qulaylik/parking.webp',
+	},
+	{
+		title: 'Besedka',
+		description:
+			'Yaqinlaringiz bilan qiziqarli suhbatlar qurishingiz uchun yopiq hovlida besedkalar mavjud. Bu sizga do‘stlaringiz va oilangiz bilan birgalikda vaqt o‘tkazishingiz uchun qulayliklarni yaratadi. Shinam muhit va sokin joylashuv esa har bir uchrashuvni yanada yoqimli.',
+		image: '/qulaylik/bisetka.webp',
+	},
+	{
+		title: 'Ochiq sport maydonchasi!',
+		description:
+			'Toza havoda sport bilan shug‘ullanishni yoqtiruvchilar uchun loyihalarimiz hududida ochiq sport maydonchalari joylashgan. Bu sizga sog‘lom turmush tarziga rioya qilishga va kuningizni yaxshi kayfiyatda boshlashingizga yordam beradi.',
+		image: '/qulaylik/ochiqmaydoncha.webp',
+	},
+	{
+		title: 'Zamonaviy yopiq sport maydonchasi',
+		description:
+			'Loyihalarimizda zamonaviy yopiq sport maydonchalari tashkil etilgan bo‘lib, ular yil davomida qulay va xavfsiz sport bilan shug‘ullanish imkonini beradi. Har qanday ob-havo sharoitidan qat’i nazar, shinam muhitda mashg‘ulot o‘tkazish sog‘lom turmush tarzini qo‘llab-quvvatlaydi.',
+		image: '/qulaylik/yopiqmaydoncha.jpg',
+	},
+	{
+		title: 'Eko-hudud',
+		description:
+			'Loyihamiz hududida eko-hudud tashkil etilgan bo‘lib, u yashil maydonlar va tabiiy muhit uyg‘unligida dam olish imkonini beradi. Toza havo, ko‘kalamzor makon va osoyishta muhit kundalik hayotdan qisqa tanaffus olib, tabiat bilan yaqinroq bo‘lishingizga yordam beradi.',
+		image: '/qulaylik/exo.jpg',
+	},
+]
+
+export const usedimages = [
+	{
+		id: 1,
+		image: '/used/armatura.webp',
+	},
+	{
+		id: 2,
+		image: '/used/blog.webp',
+	},
+	{
+		id: 3,
+		image: '/used/beton.webp',
+	},
+]
+
+export const mapsLink = [
+	{
+		id: 1,
+		image: '/used/armatura.webp',
+	},
+	{
+		id: 2,
+		image: '/used/blog.webp',
+	},
+	{
+		id: 3,
+		image: '/used/beton.webp',
+	},
+	{
+		id: 4,
+		image: '/used/beton.webp',
+	},
+	{
+		id: 5,
+		image: '/used/beton.webp',
 	},
 ]

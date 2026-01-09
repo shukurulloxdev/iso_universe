@@ -3,8 +3,8 @@ import Image from 'next/image'
 
 function Aboutus() {
 	return (
-		<div className='bg-slate-100 my-12'>
-			<div className='max-w-6xl mx-auto py-8'>
+		<div>
+			<div className='max-w-6xl mx-auto py-12'>
 				<div className='flex items-center justify-between gap-6 w-full'>
 					<div className='w-[70%] border-2 rounded-lg'>
 						<VimeoComp videoId={1151790083} autoplay={false} />

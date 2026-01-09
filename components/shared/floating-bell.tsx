@@ -25,8 +25,9 @@ export default function FloatingBell() {
           shadow-lg
         '
 			>
-				<PhoneCall className='w-6 h-6 animate-[ring_1.2s_ease-in-out_infinite]' />
+				<PhoneCall className='w-6 h-6 ' />
 			</button>
 		</a>
 	)
 }
+// animate-[ring_1.2s_ease-in-out_infinite]
