@@ -194,3 +194,29 @@ export const mapsLink = [
 		image: '/used/beton.webp',
 	},
 ]
+export const aboutProject = [
+	{
+		title: 'Qulay joylashuv',
+		image: '/margiloncity/icons/location.png',
+	},
+	{
+		title: 'Bolalar o`yingohi',
+		image: '/margiloncity/icons/playground (1).png',
+	},
+	{
+		title: 'Shovqinsiz liftlar',
+		image: '/margiloncity/icons/elevator.png',
+	},
+	{
+		title: 'Eco hudud',
+		image: '/margiloncity/icons/pathway.png',
+	},
+	{
+		title: 'Qo`riqlash va kuzatuv',
+		image: '/margiloncity/icons/cctv-camera.png',
+	},
+	{
+		title: 'Yopiq va xavfsiz hovli',
+		image: '/margiloncity/icons/park.png',
+	},
+]
