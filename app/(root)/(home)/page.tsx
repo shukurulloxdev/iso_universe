@@ -5,7 +5,6 @@ import Addresses from './_components/addresses'
 import Hero from './_components/hero'
 import Komforts from './_components/komforts'
 import Projects from './_components/projects'
-import Statistics from './_components/statistics'
 import Useds from './_components/useds'
 
 function Page() {
@@ -14,7 +13,7 @@ function Page() {
 			<Navbar />
 			<div className='w-full'>
 				<Hero />
-				<Statistics />
+				{/* <Statistics /> */}
 				<Projects />
 				<Komforts />
 				<Useds />
@@ -22,7 +21,6 @@ function Page() {
 				{/* <Aboutus /> */}
 			</div>
 			<Footer />
-			{/* Call */}
 			<FloatingBell />
 		</>
 	)

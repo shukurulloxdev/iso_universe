@@ -47,7 +47,7 @@ export default function LocationCard() {
 							initial={{ opacity: 0, x: 100 }}
 							whileInView={{ opacity: 1, x: 0 }}
 							viewport={{ once: true, amount: 0.5 }}
-							transition={{ duration: 1, ease: 'easeOut', delay: 0.7 }}
+							transition={{ duration: 1, ease: 'easeOut', delay: 0.6 }}
 						>
 							<h1 className='text-4xl text-gray-900 leading-relaxed font-bold'>
 								Loyiha haqida
@@ -70,7 +70,7 @@ export default function LocationCard() {
 							initial={{ opacity: 0, x: 100 }}
 							whileInView={{ opacity: 1, x: 0 }}
 							viewport={{ once: true, amount: 0.5 }}
-							transition={{ duration: 1, ease: 'easeOut', delay: 1.2 }}
+							transition={{ duration: 1, ease: 'easeOut', delay: 0.7 }}
 						>
 							{aboutProject.map(item => (
 								<div className='flex items-center gap-4' key={item.image}>
@@ -189,7 +189,7 @@ export default function LocationCard() {
 							initial={{ opacity: 0, x: 100 }}
 							whileInView={{ opacity: 1, x: 0 }}
 							viewport={{ once: true, amount: 0.5 }}
-							transition={{ duration: 1, ease: 'easeOut', delay: 0.7 }}
+							transition={{ duration: 1, ease: 'easeOut', delay: 0.5 }}
 						>
 							<h1 className='text-4xl text-gray-900 leading-relaxed font-bold'>
 								Majmua arxitekturasi
@@ -213,7 +213,7 @@ export default function LocationCard() {
 							initial={{ opacity: 0, x: 100 }}
 							whileInView={{ opacity: 1, x: 0 }}
 							viewport={{ once: true, amount: 0.5 }}
-							transition={{ duration: 1, ease: 'easeOut', delay: 1.2 }}
+							transition={{ duration: 1, ease: 'easeOut', delay: 0.6 }}
 						>
 							<div className='flex flex-col gap-3'>
 								<Image

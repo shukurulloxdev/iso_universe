@@ -37,7 +37,7 @@ export default function Hero() {
 
 	return (
 		<>
-			<section className='relative w-full h-[75vh] overflow-hidden mt-20'>
+			<section className='relative w-full h-[75vh] overflow-hidden mt-20 '>
 				{/* Background */}
 				<div className='absolute inset-0'>
 					<Image
@@ -104,7 +104,7 @@ export default function Hero() {
 					</div>
 
 					{/* Right image */}
-					<div className='self-end'>
+					<div className='self-end max-md:hidden'>
 						<Image
 							src='/builders/hero-img.png'
 							alt='Construction workers'

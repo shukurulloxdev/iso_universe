@@ -63,7 +63,7 @@ export default function Komforts() {
 				>
 					<CarouselContent>
 						{komforts.map((item, index) => (
-							<CarouselItem key={index} className='basis-4/5'>
+							<CarouselItem key={index} className='sm:basis-1/2  md:basis-4/5'>
 								<Card
 									className={`overflow-hidden rounded-2xl transition-all duration-300 ${
 										active === index ? 'shadow-lg' : 'opacity-70'
