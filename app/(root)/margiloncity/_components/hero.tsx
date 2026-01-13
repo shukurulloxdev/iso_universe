@@ -25,7 +25,7 @@ export default function Hero() {
 	}, [])
 
 	return (
-		<div className='relative h-screen w-full overflow-hidden'>
+		<div className='relative h-screen w-full max-md:h-[85vh] overflow-hidden'>
 			{/* ===== BACKGROUND SLIDER ===== */}
 			<AnimatePresence mode='sync'>
 				<motion.div
@@ -43,7 +43,7 @@ export default function Hero() {
 							fill
 							priority
 							sizes='100vw'
-							className='object-cover object-center sm:object-top scale-105'
+							className='object-cover object-center max-md:object-cover top scale-105'
 						/>
 					</div>
 					<div className='absolute inset-0 bg-black/60' />
@@ -52,9 +52,9 @@ export default function Hero() {
 
 			{/*  NAVBAR  */}
 			<header className='absolute top-0 z-20 w-full'>
-				<div className='mx-auto max-w-7xl px-6 py-6 flex items-center justify-between'>
+				<div className='mx-auto max-w-7xl px-4 py-6 flex items-center justify-between'>
 					<div className='flex flex-col gap-1 leading-none select-none'>
-						<span className='font-serif font-extrabold text-4xl bg-gradient-to-b from-yellow-400 via-yellow-300 to-yellow-600 bg-clip-text text-transparent leading-tight scale-y-100'>
+						<span className='font-serif font-extrabold max-md:text-[20px] text-4xl bg-gradient-to-b from-yellow-400 via-yellow-300 to-yellow-600 bg-clip-text text-transparent leading-tight scale-y-100'>
 							Marg&apos;ilon City
 						</span>
 
@@ -101,20 +101,20 @@ export default function Hero() {
 			</header>
 
 			{/* ===== HERO CONTENT ===== */}
-			<div className='relative z-10 mx-auto max-w-7xl h-full px-6 pb-16 flex items-center justify-between '>
+			<div className='max-md:hidden relative z-10 mx-auto max-w-7xl h-full px-4 pb-16 flex items-center justify-between '>
 				<div className='flex flex-col gap-6 text-white self-end'>
 					<h1 className='max-w-3xl flex flex-col gap-2 text-3xl md:text-5xl font-bold font-work leading-tight '>
 						<span>Qulay va farovon hayot</span>{' '}
 						<span>uchun ideal shaharcha</span>
 					</h1>
 
-					<p className=' max-w-xl text-sm md:text-lg text-white/85'>
+					<p className='max-w-xl text-sm md:text-lg text-white/85'>
 						Marg‘ilon shahrida barpo etilayotgan zamonaviy, xavfsiz va qulay
 						turar-joy majmuasi, farovon hayot uchun barcha zarur qulayliklar va
 						zamonaviy infrastruktura bilan ta`minlangan. Siz va oilangiz uchun.
 					</p>
 
-					<div className=' flex flex-wrap gap-4'>
+					<div className='flex flex-wrap gap-4 max-md:hidden'>
 						<Button
 							size={'lg'}
 							className='rounded-full bg-yellow-500 text-sm font-semibold text-black hover:bg-yellow-400 transition'
@@ -147,9 +147,124 @@ export default function Hero() {
 							height={50}
 						/>
 					</a>
-					{/*  */}
 				</div>
+			</div>
+			{/* HERO CONTENT */}
+			<div className='lg:hidden absolute left-0 right-0 bottom-40 z-20 px-4 text-white'>
+				<h1 className='text-[26px] font-bold leading-tight max-w-[360px]'>
+					Butun oila uchun <br />
+					mukammal <br />
+					qulayliklarga ega <br />
+					xonadonlar
+				</h1>
+
+				<p className='mt-4 text-sm leading-relaxed max-w-[360px] text-white/90'>
+					Crystal Avenue – TXT Group kompaniyasi tomonidan Farg‘ona shahrida
+					barpo etilayotgan ko‘p qavatli, komfort toifadagi turar-joy majmuasi.
+				</p>
+			</div>
+
+			{/* CTA BUTTON */}
+			<div className='absolute left-0 right-0 bottom-20 z-20 px-6'>
+				<button className='w-full rounded-full bg-green-700 py-4 text-base font-semibold text-white shadow-md active:scale-[0.98] transition'>
+					Rejalashtirishni tanlash
+				</button>
+			</div>
+
+			{/* FLOATING LIVE + PHONE */}
+			<div className='absolute right-4 bottom-44 z-30 flex flex-col items-center gap-3'>
+				{/* LIVE */}
+				<div className='bg-green-700 text-white text-xs px-4 py-1 rounded-full'>
+					Live
+				</div>
+
+				{/* PHONE */}
+				<a
+					href='tel:1361'
+					className='w-12 h-12 rounded-full bg-green-700 flex items-center justify-center shadow-lg active:scale-95 transition'
+				>
+					<Phone size={20} className='text-white' />
+				</a>
 			</div>
 		</div>
 	)
 }
+
+// 'use client'
+
+// import { Button } from '@/components/ui/button'
+// import { Menu, Phone } from 'lucide-react'
+// import Image from 'next/image'
+
+// export default function Hero() {
+// 	return (
+// 		<section className='relative w-full h-[100svh] overflow-hidden'>
+// 			{/* BACKGROUND */}
+// 			<Image
+// 				src='/margiloncity/img1.webp'
+// 				alt='Crystal Avenue'
+// 				fill
+// 				priority
+// 				className='object-cover'
+// 			/>
+// 			<div className='absolute inset-0 bg-black/55' />
+
+// 			{/* HEADER */}
+// 			<div className='absolute top-0 left-0 right-0 z-20 px-4 pt-4 flex items-center justify-between text-white'>
+// 				<div>
+// 					<p className='text-sm tracking-wide'>CRYSTAL AVENUE</p>
+// 					<p className='text-[10px] opacity-70'>KO‘P QAVATLI MAJMUASI</p>
+// 				</div>
+
+// 				<div className='flex items-center gap-3'>
+// 					<div className='flex items-center gap-1 font-semibold'>
+// 						<Phone size={16} />
+// 						<span>1361</span>
+// 					</div>
+// 					<Menu />
+// 				</div>
+// 			</div>
+
+// 			{/* GOLD BADGE */}
+// 			<div className='absolute top-24 right-4 z-20'>
+// 				<Image
+// 					src='/badge.png' // ⚠️ badge rasm bo‘lishi kerak
+// 					alt='badge'
+// 					width={64}
+// 					height={64}
+// 				/>
+// 			</div>
+
+// 			{/* CONTENT */}
+// 			<div className='absolute bottom-32 left-0 right-0 z-20 px-4 text-white'>
+// 				<h1 className='text-2xl font-bold leading-snug'>
+// 					Butun oila uchun <br />
+// 					mukammal qulayliklarga ega <br />
+// 					xonadonlar
+// 				</h1>
+
+// 				<p className='text-sm opacity-85 mt-3 leading-relaxed'>
+// 					Crystal Avenue – TXT Group kompaniyasi tomonidan Farg‘ona shahrida
+// 					barpo etilayotgan ko‘p qavatli, komfort toifadagi turar-joy majmuasi.
+// 				</p>
+// 			</div>
+
+// 			{/* CTA */}
+// 			<div className='absolute bottom-12 left-0 right-0 z-20 px-4'>
+// 				<Button className='w-full rounded-full bg-green-700 hover:bg-green-800 text-white py-6 text-base'>
+// 					Rejalashtirishni tanlash
+// 				</Button>
+// 			</div>
+
+// 			{/* FLOATING BUTTONS */}
+// 			<div className='absolute bottom-36 right-4 z-30 flex flex-col gap-3'>
+// 				<div className='bg-green-700 text-white text-xs px-3 py-1 rounded-full'>
+// 					Live
+// 				</div>
+// 				<button className='w-12 h-12 rounded-full bg-green-700 flex items-center justify-center'>
+// 					<Phone className='text-white' />
+// 				</button>
+// 			</div>
+// 		</section>
+// 	)
+// }

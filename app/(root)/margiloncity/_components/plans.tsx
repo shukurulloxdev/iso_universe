@@ -183,7 +183,7 @@ function Plans() {
 	return (
 		<div className='max-w-7xl mx-auto py-12'>
 			<Tabs defaultValue='hammasi'>
-				<div className='flex items-center justify-between'>
+				<div className='flex max-md:flex-col items-center justify-between'>
 					<h1 className='text-4xl font-semibold font-lexend'>
 						Xonadonlarning o‘ylangan rejalari
 					</h1>
