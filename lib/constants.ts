@@ -138,13 +138,13 @@ export const komforts = [
 		image: '/qulaylik/bisetka.webp',
 	},
 	{
-		title: 'Ochiq sport maydonchasi!',
+		title: 'Ochiq sport maydonchasi',
 		description:
 			'Toza havoda sport bilan shug‘ullanishni yoqtiruvchilar uchun loyihalarimiz hududida ochiq sport maydonchalari joylashgan. Bu sizga sog‘lom turmush tarziga rioya qilishga va kuningizni yaxshi kayfiyatda boshlashingizga yordam beradi.',
 		image: '/qulaylik/ochiqmaydoncha.webp',
 	},
 	{
-		title: 'Zamonaviy yopiq sport maydonchasi',
+		title: 'Yopiq sport maydonchasi',
 		description:
 			'Loyihalarimizda zamonaviy yopiq sport maydonchalari tashkil etilgan bo‘lib, ular yil davomida qulay va xavfsiz sport bilan shug‘ullanish imkonini beradi. Har qanday ob-havo sharoitidan qat’i nazar, shinam muhitda mashg‘ulot o‘tkazish sog‘lom turmush tarzini qo‘llab-quvvatlaydi.',
 		image: '/qulaylik/yopiqmaydoncha.jpg',
