@@ -5,9 +5,9 @@ import { IProject } from '@/types/types'
 function Projects() {
 	return (
 		<div className='bg-violet-50'>
-			<div className='max-w-6xl mx-auto  max-md:px-3 pt-8 pb-12 '>
+			<div className='max-w-6xl mx-auto  max-md:px-3  pb-12 '>
 				<div className='flex items-center justify-center py-5'>
-					<h1 className='text-[20px] md:text-3xl font-bold text-gray-800 font-lexend '>
+					<h1 className='text-[25px] md:text-3xl font-bold text-gray-800 font-lexend '>
 						Bizning loyihalarimiz!
 					</h1>
 				</div>
