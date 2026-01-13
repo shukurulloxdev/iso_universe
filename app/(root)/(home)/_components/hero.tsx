@@ -151,11 +151,9 @@ import { useVideoStore } from '@/zustand/store/videoStore'
 import { motion } from 'framer-motion'
 import { Play } from 'lucide-react'
 import Image from 'next/image'
-import { useEffect, useState } from 'react'
 import { Cursor, useTypewriter } from 'react-simple-typewriter'
 
 export default function Hero() {
-	const [showSecond, setShowSecond] = useState(false)
 	const { isOpen, toggleIsOpen } = useVideoStore()
 
 	const [text] = useTypewriter({
@@ -164,15 +162,9 @@ export default function Hero() {
 		typeSpeed: 75,
 	})
 
-	useEffect(() => {
-		if (text === 'Kelajagingizni birga') {
-			setTimeout(() => setShowSecond(true), 300)
-		}
-	}, [text])
-
 	return (
 		<>
-			<section className='relative w-full h-[75vh] max-md:h-[100vh] overflow-hidden mt-20'>
+			<section className='relative w-full h-[75vh] max-md:h-full overflow-hidden mt-20'>
 				{/* ================= BACKGROUND ================= */}
 				<div className='absolute inset-0'>
 					<Image
@@ -186,7 +178,7 @@ export default function Hero() {
 				</div>
 
 				{/* ================= MOBILE HERO (UPGRADED) ================= */}
-				<div className='relative z-10 lg:hidden h-full flex flex-col justify-center px-3'>
+				<div className='relative z-10 lg:hidden h-full flex flex-col justify-center px-3 pb-8'>
 					{/* HERO IMAGE */}
 					<motion.div
 						initial={{ opacity: 0, y: 30 }}
@@ -221,7 +213,7 @@ export default function Hero() {
 					>
 						<h1 className='text-2xl  font-bold font-lexend text-[#263640] leading-tight'>
 							{text}
-							{!showSecond && <Cursor cursorStyle='|' />}
+							<Cursor cursorStyle='|' />
 						</h1>
 
 						<p className='mt-2 text-sm text-gray-600'>
@@ -264,25 +256,14 @@ export default function Hero() {
 				</div>
 
 				{/* ================= DESKTOP HERO (ORIGINAL) ================= */}
-				<div className='relative z-10 max-w-6xl h-full mx-auto hidden lg:flex items-center justify-between'>
+				<div className='relative z-10 max-w-6xl h-full mx-auto max-md:hidden flex items-center justify-between'>
 					{/* Left */}
 					<div>
 						<h1 className='text-5xl font-bold leading-tight font-lexend text-[#263640]'>
 							<span>
 								{text}
-								{!showSecond && <Cursor cursorStyle='|' />}
+								<Cursor cursorStyle='|' />
 							</span>
-							<br />
-							{showSecond && (
-								<motion.span
-									className='text-orange-500 inline-block'
-									initial={{ y: -40, opacity: 0 }}
-									animate={{ y: 0, opacity: 1 }}
-									transition={{ duration: 0.7, ease: 'easeOut' }}
-								>
-									quramiz
-								</motion.span>
-							)}
 						</h1>
 
 						<p className='mt-6 text-gray-600 w-[70%]'>
