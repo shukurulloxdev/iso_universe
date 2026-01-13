@@ -52,7 +52,8 @@ export default function Hero() {
 								className='object-cover object-center max-md:object-cover top scale-105'
 							/>
 						</div>
-						<div className='absolute inset-0 bg-black/60' />
+						<div className='max-md:hidden absolute inset-0 bg-black/60' />
+						<div className='md:hidden absolute inset-0 bg-[rgba(0,0,20,0.5)]' />
 					</motion.div>
 				</AnimatePresence>
 
@@ -70,10 +71,9 @@ export default function Hero() {
 								</span>
 							</div>
 						</div>
-						<div className='md:hidden flex items-center gap-4'>
-							<button className='flex items-center gap-2 text-[12px] text-white bg-white/10 backdrop-blur px-4 py-2 rounded-full hover:bg-white/20 transition'>
-								<Phone size={17} />
-								78 555 9090
+						<div className='md:hidden flex items-center gap-2'>
+							<button className='bg-white/10 backdrop-blur px-4 text-white py-2 rounded-full hover:bg-white/20 transition'>
+								<MapPinHouse size={17} />
 							</button>
 							<button
 								onClick={() => setOpen(true)}
@@ -119,7 +119,7 @@ export default function Hero() {
 				</header>
 
 				{/* ===== HERO CONTENT ===== */}
-				<div className='max-md:hidden relative z-10 mx-auto max-w-7xl h-full px-4 pb-16 flex items-center justify-between '>
+				<div className='max-md:hidden relative z-10 mx-auto max-w-7xl h-full px-4 pb-16 flex items-center justify-between'>
 					<div className='flex flex-col gap-6 text-white self-end'>
 						<h1 className='max-w-3xl flex flex-col gap-2 text-3xl md:text-5xl font-bold font-work leading-tight '>
 							<span>Qulay va farovon hayot</span>{' '}
@@ -169,42 +169,73 @@ export default function Hero() {
 					</div>
 				</div>
 				{/* HERO CONTENT */}
-				<div className='lg:hidden absolute left-0 right-0 bottom-40 z-20 px-4 text-white'>
-					<h1 className='text-[26px] font-bold leading-tight max-w-[360px]'>
-						Butun oila uchun <br />
-						mukammal <br />
-						qulayliklarga ega <br />
-						xonadonlar
+				{/* <div className='md:hidden absolute left-0 right-0 bottom-40 z-20 px-4 text-white'>
+					<h1 className='text-2xl font-bold leading-tight max-w-[360px]'>
+						Qulay va farovon hayot <br /> uchun ideal shaharcha
 					</h1>
 
 					<p className='mt-4 text-sm leading-relaxed max-w-[360px] text-white/90'>
-						Crystal Avenue – TXT Group kompaniyasi tomonidan Farg‘ona shahrida
-						barpo etilayotgan ko‘p qavatli, komfort toifadagi turar-joy
-						majmuasi.
+						Marg‘ilon shahrida barpo etilayotgan zamonaviy, xavfsiz va qulay
+						turar-joy majmuasi, farovon hayot uchun barcha zarur qulayliklar
 					</p>
 				</div>
 
-				{/* CTA BUTTON */}
 				<div className='absolute left-0 right-0 bottom-20 z-20 px-6'>
 					<button className='w-full rounded-full bg-green-700 py-4 text-base font-semibold text-white shadow-md active:scale-[0.98] transition'>
 						Rejalashtirishni tanlash
 					</button>
 				</div>
 
-				{/* FLOATING LIVE + PHONE */}
 				<div className='absolute right-4 bottom-44 z-30 flex flex-col items-center gap-3'>
-					{/* LIVE */}
 					<div className='bg-green-700 text-white text-xs px-4 py-1 rounded-full'>
 						Live
 					</div>
-
-					{/* PHONE */}
 					<a
 						href='tel:1361'
 						className='w-12 h-12 rounded-full bg-green-700 flex items-center justify-center shadow-lg active:scale-95 transition'
 					>
 						<Phone size={20} className='text-white' />
 					</a>
+				</div> */}
+				{/* HERO CONTENT WRAPPER */}
+				<div className='md:hidden absolute left-0 right-0 bottom-36 z-20 px-4 text-white'>
+					<div className='flex items-end'>
+						{/* LEFT — 70% */}
+						<div className='w-[70%] pr-2'>
+							<h1 className='text-2xl font-bold leading-tight'>
+								Qulay va farovon hayot <br />
+								uchun ideal shaharcha
+							</h1>
+
+							<p className='mt-4 text-sm leading-relaxed text-white/90'>
+								Marg‘ilon shahrida barpo etilayotgan zamonaviy, xavfsiz va qulay
+								turar-joy majmuasi, farovon hayot uchun barcha zarur qulayliklar
+							</p>
+						</div>
+
+						{/* RIGHT — 30% */}
+						<div className='w-[30%] flex flex-col items-center gap-3'>
+							{/* LIVE */}
+							<div className='bg-green-700 text-white text-xs px-4 py-1 rounded-full'>
+								Live
+							</div>
+
+							{/* PHONE */}
+							<a
+								href='tel:1361'
+								className='w-12 h-12 rounded-full bg-green-700 flex items-center justify-center shadow-lg active:scale-95 transition'
+							>
+								<Phone size={20} className='text-white' />
+							</a>
+						</div>
+					</div>
+				</div>
+
+				{/* CTA BUTTON — FULL WIDTH */}
+				<div className='md:hidden absolute left-0 right-0 bottom-20 z-20 px-6'>
+					<button className='w-full rounded-full bg-green-700 py-4 text-base font-semibold text-white shadow-md active:scale-[0.98] transition'>
+						Rejalashtirishni tanlash
+					</button>
 				</div>
 			</div>
 			<AnimatePresence>
