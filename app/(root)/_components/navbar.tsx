@@ -9,7 +9,7 @@ function Navbar() {
 	const [show, setShow] = useState(true)
 	const [lastScrollY, setLastScrollY] = useState(0)
 	const [open, setOpen] = useState(false)
-
+	
 	// hide / show on scroll
 	useEffect(() => {
 		const handleScroll = () => {
@@ -21,11 +21,10 @@ function Navbar() {
 			}
 			setLastScrollY(current)
 		}
-
+		
 		window.addEventListener('scroll', handleScroll)
 		return () => window.removeEventListener('scroll', handleScroll)
 	}, [lastScrollY])
-
 	// body lock when menu open
 	useEffect(() => {
 		document.body.style.overflow = open ? 'hidden' : 'auto'
