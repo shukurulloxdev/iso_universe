@@ -2,7 +2,7 @@ import Counter from '@/components/shared/counter'
 
 function Statistics() {
 	return (
-		<div className='bg-orange-50'>
+		<div className='max-md:hidden bg-orange-50'>
 			<div className='max-w-6xl mx-auto py-2'>
 				<div className='w-full flex justify-between'>
 					<div className='flex flex-col'>

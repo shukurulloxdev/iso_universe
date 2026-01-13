@@ -151,17 +151,27 @@ import { useVideoStore } from '@/zustand/store/videoStore'
 import { motion } from 'framer-motion'
 import { Play } from 'lucide-react'
 import Image from 'next/image'
+import Link from 'next/link'
+import { useEffect, useState } from 'react'
 import { Cursor, useTypewriter } from 'react-simple-typewriter'
 
 export default function Hero() {
 	const { isOpen, toggleIsOpen } = useVideoStore()
-
+	const [showCursor, setShowCursor] = useState(true)
 	const [text] = useTypewriter({
 		words: ['Kelajagingizni birga mustahkam quramiz! '],
 		loop: 1,
 		typeSpeed: 75,
 	})
+	useEffect(() => {
+		if (text === 'Kelajagingizni birga mustahkam quramiz! ') {
+			const timer = setTimeout(() => {
+				setShowCursor(false)
+			}, 300) // biroz kechikish chiroyli ko‘rinadi
 
+			return () => clearTimeout(timer)
+		}
+	}, [text])
 	return (
 		<>
 			<section className='relative w-full h-[75vh] max-md:h-full overflow-hidden mt-20'>
@@ -213,7 +223,7 @@ export default function Hero() {
 					>
 						<h1 className='text-2xl  font-bold font-lexend text-[#263640] leading-tight'>
 							{text}
-							<Cursor cursorStyle='|' />
+							{showCursor && <Cursor cursorStyle='|' />}
 						</h1>
 
 						<p className='mt-2 text-sm text-gray-600'>
@@ -239,9 +249,11 @@ export default function Hero() {
 
 						{/* CTA */}
 						<div className='mt-6 flex flex-col gap-2'>
-							<Button className='w-full bg-orange-500 hover:bg-orange-600 shadow-lg'>
-								Loyihalarimiz
-							</Button>
+							<Link href={'#loyhalar'}>
+								<Button className='w-full bg-orange-500 hover:bg-orange-600 shadow-lg'>
+									Loyihalarimiz
+								</Button>
+							</Link>
 
 							<Button
 								onClick={toggleIsOpen}
@@ -262,7 +274,7 @@ export default function Hero() {
 						<h1 className='text-5xl font-bold leading-tight font-lexend text-[#263640]'>
 							<span>
 								{text}
-								<Cursor cursorStyle='|' />
+								{showCursor && <Cursor cursorStyle='|' />}
 							</span>
 						</h1>
 
@@ -272,13 +284,15 @@ export default function Hero() {
 						</p>
 
 						<div className='mt-8 flex items-center gap-4'>
-							<Button
-								size='lg'
-								className='bg-orange-500 hover:bg-orange-600 transition-all duration-300
+							<Link href={'#loyhalar'}>
+								<Button
+									size='lg'
+									className='bg-orange-500 hover:bg-orange-600 transition-all duration-300
 								hover:shadow-xl hover:-translate-y-1'
-							>
-								Loyihalarimiz
-							</Button>
+								>
+									Loyihalarimiz
+								</Button>
+							</Link>
 
 							<Button
 								onClick={toggleIsOpen}
