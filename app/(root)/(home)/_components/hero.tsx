@@ -138,6 +138,7 @@
 
 'use client'
 
+import Counter from '@/components/shared/counter'
 import VimeoComp from '@/components/shared/vimeo-comp'
 import { Button } from '@/components/ui/button'
 import {
@@ -227,23 +228,29 @@ export default function Hero() {
 						</h1>
 
 						<p className='mt-2 text-sm text-gray-600'>
-							10+ yillik tajriba, 30+ binolar, zamonaviy arxitektura va
-							mustahkam beton.
+							7+ yillik tajriba, 40+ binolar, zamonaviy arxitektura va mustahkam
+							beton.
 						</p>
 
 						{/* STATS */}
 						<div className='grid grid-cols-3 gap-4 mt-4 text-center'>
 							<div>
-								<p className='text-xl font-bold text-orange-500'>36+</p>
+								<p className='text-xl font-bold text-orange-500'>
+									<Counter value={7} />+
+								</p>
 								<p className='text-xs text-gray-500'>Yil tajriba</p>
 							</div>
 							<div>
-								<p className='text-xl font-bold text-orange-500'>3000+</p>
+								<p className='text-xl font-bold text-orange-500'>
+									<Counter value={40} />+
+								</p>
 								<p className='text-xs text-gray-500'>Loyihalar</p>
 							</div>
 							<div>
-								<p className='text-xl font-bold text-orange-500'>100%</p>
-								<p className='text-xs text-gray-500'>Ishonch</p>
+								<p className='text-xl font-bold text-orange-500'>
+									<Counter value={3000} />+
+								</p>
+								<p className='text-xs text-gray-500'>Mijozlar</p>
 							</div>
 						</div>
 
@@ -321,8 +328,9 @@ export default function Hero() {
 			</section>
 
 			{/* ================= VIDEO MODAL ================= */}
+
 			<Dialog open={isOpen} onOpenChange={toggleIsOpen}>
-				<DialogContent className='p-9 max-w-[700px]'>
+				<DialogContent className='p-9 max-w-[700px] max-md:w-[90%] rounded-2xl'>
 					<div className='w-full h-full border-2 rounded-lg'>
 						<VimeoComp videoId={1151790083} autoplay />
 					</div>

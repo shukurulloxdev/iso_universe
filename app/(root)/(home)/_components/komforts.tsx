@@ -27,7 +27,10 @@ export default function Komforts() {
 	}, [api])
 
 	return (
-		<section className='max-w-6xl mx-auto max-md:pt-6 md:my-14 '>
+		<section
+			className='max-w-6xl mx-auto max-md:pt-6 md:my-14'
+			id='qulayliklar'
+		>
 			<h1 className='max-md:hidden text-3xl font-bold leading-tight font-lexend text-[#4c4e4f]'>
 				Afzalliklar
 			</h1>

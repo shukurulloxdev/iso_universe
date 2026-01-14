@@ -9,7 +9,7 @@ function Navbar() {
 	const [show, setShow] = useState(true)
 	const [lastScrollY, setLastScrollY] = useState(0)
 	const [open, setOpen] = useState(false)
-	
+
 	// hide / show on scroll
 	useEffect(() => {
 		const handleScroll = () => {
@@ -21,7 +21,7 @@ function Navbar() {
 			}
 			setLastScrollY(current)
 		}
-		
+
 		window.addEventListener('scroll', handleScroll)
 		return () => window.removeEventListener('scroll', handleScroll)
 	}, [lastScrollY])
@@ -114,14 +114,14 @@ function Navbar() {
 
 								{/* LINKS */}
 								<nav className='mt-10 flex flex-col gap-6 text-lg font-medium text-gray-800'>
-									<a onClick={() => setOpen(false)} href='#projects'>
+									<a onClick={() => setOpen(false)} href='#loyhalar'>
 										Loyihalar
 									</a>
-									<a onClick={() => setOpen(false)} href='#about'>
-										Biz haqimizda
+									<a onClick={() => setOpen(false)} href='#qulayliklar'>
+										Afzalliklar
 									</a>
-									<a onClick={() => setOpen(false)} href='#news'>
-										Yangiliklar
+									<a onClick={() => setOpen(false)} href='#joylashuv'>
+										Sotuv ofis
 									</a>
 									<a onClick={() => setOpen(false)} href='#reviews'>
 										Sharhlar
@@ -131,7 +131,7 @@ function Navbar() {
 								{/* CTA */}
 								<div className='mt-10'>
 									<a
-										href='tel:+998712007400'
+										href='tel:+998785559090'
 										className='flex items-center justify-center gap-3
 										w-full py-[6px] rounded-2xl
 										bg-orange-500 text-white text-lg font-semibold

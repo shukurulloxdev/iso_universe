@@ -3,7 +3,10 @@ import Image from 'next/image'
 function Addresses() {
 	return (
 		<div>
-			<div className='max-w-6xl mx-auto py-14 max-md:py-8 max-md:px-3 '>
+			<div
+				className='max-w-6xl mx-auto py-14 max-md:py-8 max-md:px-3'
+				id='joylashuv'
+			>
 				<h1 className='max-md:text-2xl text-3xl font-bold font-lexend text-[#4c4e4f]'>
 					Bizning sotuv ofisimiz
 				</h1>

@@ -2,7 +2,7 @@
 
 import { Button } from '@/components/ui/button'
 import { AnimatePresence, motion } from 'framer-motion'
-import { MapPinHouse, Menu, Phone, X } from 'lucide-react'
+import { MapPinHouse, Menu, MessageSquareText, Phone, X } from 'lucide-react'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 
@@ -101,11 +101,6 @@ export default function Hero() {
 							))}
 						</nav>
 						<div className='hidden md:flex items-center gap-6 text-white'>
-							{/* <div className='flex items-center gap-2 text-sm'>
-							<Phone size={16} />
-							<span className='font-semibold'>78 555 9090</span>
-						</div> */}
-
 							<button className='flex items-center gap-2 text-sm bg-white/10 backdrop-blur px-4 py-2 rounded-full hover:bg-white/20 transition'>
 								<Phone />
 								78 555 9090
@@ -115,6 +110,14 @@ export default function Hero() {
 								Joylashuv
 							</button>
 						</div>
+					</div>
+					<div className='flex justify-end px-4'>
+						<Image
+							src={'/margiloncity/logo/ruhsatnoma.png'}
+							alt='ruhsatnoma'
+							width={60}
+							height={60}
+						/>
 					</div>
 				</header>
 
@@ -168,75 +171,47 @@ export default function Hero() {
 						</a>
 					</div>
 				</div>
-				{/* HERO CONTENT */}
-				{/* <div className='md:hidden absolute left-0 right-0 bottom-40 z-20 px-4 text-white'>
-					<h1 className='text-2xl font-bold leading-tight max-w-[360px]'>
-						Qulay va farovon hayot <br /> uchun ideal shaharcha
-					</h1>
-
-					<p className='mt-4 text-sm leading-relaxed max-w-[360px] text-white/90'>
-						Marg‘ilon shahrida barpo etilayotgan zamonaviy, xavfsiz va qulay
-						turar-joy majmuasi, farovon hayot uchun barcha zarur qulayliklar
-					</p>
-				</div>
-
-				<div className='absolute left-0 right-0 bottom-20 z-20 px-6'>
-					<button className='w-full rounded-full bg-green-700 py-4 text-base font-semibold text-white shadow-md active:scale-[0.98] transition'>
-						Rejalashtirishni tanlash
-					</button>
-				</div>
-
-				<div className='absolute right-4 bottom-44 z-30 flex flex-col items-center gap-3'>
-					<div className='bg-green-700 text-white text-xs px-4 py-1 rounded-full'>
-						Live
-					</div>
-					<a
-						href='tel:1361'
-						className='w-12 h-12 rounded-full bg-green-700 flex items-center justify-center shadow-lg active:scale-95 transition'
-					>
-						<Phone size={20} className='text-white' />
-					</a>
-				</div> */}
-				{/* HERO CONTENT WRAPPER */}
-				<div className='md:hidden absolute left-0 right-0 bottom-36 z-20 px-4 text-white'>
-					<div className='flex items-end'>
+				<div className='md:hidden absolute left-0 right-0 bottom-8 z-20 px-4 text-white'>
+					<div className='flex items-end justify-between gap-2'>
 						{/* LEFT — 70% */}
-						<div className='w-[70%] pr-2'>
-							<h1 className='text-2xl font-bold leading-tight'>
-								Qulay va farovon hayot <br />
-								uchun ideal shaharcha
+						<div className=' pr-2'>
+							<h1 className='text-2xl font-bold leading-tight drop-shadow-2xl'>
+								Qulay va farovon hayot uchun ideal shaharcha
 							</h1>
 
 							<p className='mt-4 text-sm leading-relaxed text-white/90'>
 								Marg‘ilon shahrida barpo etilayotgan zamonaviy, xavfsiz va qulay
-								turar-joy majmuasi, farovon hayot uchun barcha zarur qulayliklar
+								turar-joy majmuasi.
 							</p>
 						</div>
 
 						{/* RIGHT — 30% */}
-						<div className='w-[30%] flex flex-col items-center gap-3'>
-							{/* LIVE */}
-							<div className='bg-green-700 text-white text-xs px-4 py-1 rounded-full'>
-								Live
-							</div>
-
-							{/* PHONE */}
+						<div className='flex flex-col items-center gap-3'>
 							<a
 								href='tel:1361'
-								className='w-12 h-12 rounded-full bg-green-700 flex items-center justify-center shadow-lg active:scale-95 transition'
+								className='w-12 h-12 rounded-full bg-orange-500 flex items-center justify-center shadow-lg active:scale-95 transition'
+							>
+								<MessageSquareText size={20} className='text-white' />
+							</a>
+							<a
+								href='tel:1361'
+								className='w-12 h-12 rounded-full bg-orange-500 flex items-center justify-center shadow-lg active:scale-95 transition'
 							>
 								<Phone size={20} className='text-white' />
 							</a>
 						</div>
 					</div>
+					<Button className='w-full mt-4 bg-white/10 backdrop-blur text-white rounded-full hover:bg-white/20 transition'>
+						Honadon rejalashtirish
+					</Button>
 				</div>
 
 				{/* CTA BUTTON — FULL WIDTH */}
-				<div className='md:hidden absolute left-0 right-0 bottom-20 z-20 px-6'>
+				{/* <div className='md:hidden absolute left-0 right-0 bottom-20 z-20 px-6'>
 					<button className='w-full rounded-full bg-green-700 py-4 text-base font-semibold text-white shadow-md active:scale-[0.98] transition'>
 						Rejalashtirishni tanlash
 					</button>
-				</div>
+				</div> */}
 			</div>
 			<AnimatePresence>
 				{open && (
