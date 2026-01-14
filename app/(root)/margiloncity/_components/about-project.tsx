@@ -5,10 +5,10 @@ import Image from 'next/image'
 export default function LocationCard() {
 	return (
 		<>
-			<section className='max-w-7xl mx-auto py-20'>
-				<div className='grid grid-cols-2 gap-20 items-center max-lg:grid-cols-1'>
+			<section className='max-w-7xl mx-auto md:py-20 py-8 '>
+				<div className='grid grid-cols-2 gap-20 items-center max-lg:grid-cols-1 max-md:px-4'>
 					<motion.div
-						className='relative self-start'
+						className='relative self-start  order-2 lg:order-1'
 						initial={{ opacity: 0, x: -100 }}
 						whileInView={{ opacity: 1, x: 0 }}
 						viewport={{ once: true, amount: 0.5 }}
@@ -41,7 +41,7 @@ export default function LocationCard() {
 					</motion.div>
 					{/*  */}
 
-					<div className='flex flex-col items-start gap-3 self-start '>
+					<div className='flex flex-col items-start gap-3 self-start order-1 lg:order-2 '>
 						<motion.div
 							className='flex flex-col items-start gap-3 self-start'
 							initial={{ opacity: 0, x: 100 }}
@@ -49,33 +49,43 @@ export default function LocationCard() {
 							viewport={{ once: true, amount: 0.5 }}
 							transition={{ duration: 1, ease: 'easeOut', delay: 0.6 }}
 						>
-							<h1 className='text-4xl text-gray-900 leading-relaxed font-bold'>
-								Loyiha haqida
+							<h1 className='md:text-4xl  text-[30px]  text-gray-800 leading-relaxed font-bold'>
+								Margilon city haqida
 							</h1>
 
-							<div className='flex flex-col gap-4'>
+							<div className='flex flex-col gap-4 text-sm font-work'>
 								<p className='text-gray-700'>
-									Urgut shahrida qad ko`tarilayotgan Nurafshon majmuasi — bu
-									sizning orzularingizdagi ideal maskan.
+									Margilon city — shahar markazida joylashgan, zamonaviy
+									arxitektura va qulay yashash sharoitlari bilan ajralib
+									turadigan turar-joy majmuasi. Loyihaning har bir jabhasi
+									hayotingizni yanada farovon va qulay qilish uchun
+									moʻljallangan.
 								</p>
 								<p className='text-gray-700'>
-									Bu majmua yashash uchun ideal joy bo‘lib, qulay va farovon
-									hayot uchun mo‘ljallangan.
+									Majmua atrofida tabiat bilan uygʻun yashashni taʼminlovchi
+									yashil hududlar va ochiq maydonlar mavjud. Bu joylarda siz va
+									oilangiz uchun dam olish, bolalar uchun esa xavfsiz oʻyin
+									maydonchalari taqdim etiadi.
 								</p>
 							</div>
 						</motion.div>
 
 						<motion.div
-							className='grid grid-cols-2 gap-7 mt-8'
+							className='grid grid-cols-2 gap-7 md:mt-8 mt-5'
 							initial={{ opacity: 0, x: 100 }}
 							whileInView={{ opacity: 1, x: 0 }}
 							viewport={{ once: true, amount: 0.5 }}
 							transition={{ duration: 1, ease: 'easeOut', delay: 0.7 }}
 						>
 							{aboutProject.map(item => (
-								<div className='flex items-center gap-4' key={item.image}>
-									<Image src={item.image} alt='lats' width={60} height={60} />
-									<h1 className='md:max-w-[150px] text-xl font-roboto font-bold text-gray-800 tracking-wider'>
+								<div
+									className='flex items-center md:gap-4 gap-2'
+									key={item.image}
+								>
+									<div className='relative md:w-14 md:h-14 h-12 w-14'>
+										<Image src={item.image} alt='lats' fill />
+									</div>
+									<h1 className='md:max-w-[150px] text-sm md:text-xl font-roboto font-bold text-gray-800 tracking-wider'>
 										{item.title}
 									</h1>
 								</div>

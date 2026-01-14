@@ -2,7 +2,14 @@
 
 import { Button } from '@/components/ui/button'
 import { AnimatePresence, motion } from 'framer-motion'
-import { MapPinHouse, Menu, MessageSquareText, Phone, X } from 'lucide-react'
+import {
+	MapPinHouse,
+	Menu,
+	MessageSquareText,
+	Phone,
+	PhoneCall,
+	X,
+} from 'lucide-react'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 
@@ -111,13 +118,14 @@ export default function Hero() {
 							</button>
 						</div>
 					</div>
-					<div className='flex justify-end px-4'>
-						<Image
-							src={'/margiloncity/logo/ruhsatnoma.png'}
-							alt='ruhsatnoma'
-							width={60}
-							height={60}
-						/>
+					<div className=' max-w-7xl mx-auto flex justify-end  px-4'>
+						<div className='relative w-20 h-20 max-md:w-14 max-md:h-14	'>
+							<Image
+								src={'/margiloncity/logo/ruhsatnoma.png'}
+								alt='ruhsatnoma'
+								fill
+							/>
+						</div>
 					</div>
 				</header>
 
@@ -153,27 +161,19 @@ export default function Hero() {
 						</div>
 					</div>
 					<div className='self-end flex flex-col gap-4'>
-						<a className=''>
-							<Image
-								src={'/mes/telegram.png'}
-								alt='telegram'
-								width={50}
-								height={50}
-							/>
-						</a>
-						<a href='tel:+998902015858' className=''>
-							<Image
-								src={'/mes/phone-call.png'}
-								alt='telegram'
-								width={50}
-								height={50}
-							/>
+						<div className='w-16 h-16 cursor-pointer rounded-full bg-orange-500 flex items-center justify-center shadow-lg active:scale-95 transition'>
+							<MessageSquareText size={27} className='text-white' />
+						</div>
+						<a
+							href='tel:+998785559090'
+							className='w-16 h-16 rounded-full cursor-pointer  bg-orange-500 flex items-center justify-center shadow-lg active:scale-95 transition '
+						>
+							<PhoneCall size={27} className='text-white' />
 						</a>
 					</div>
 				</div>
 				<div className='md:hidden absolute left-0 right-0 bottom-8 z-20 px-4 text-white'>
 					<div className='flex items-end justify-between gap-2'>
-						{/* LEFT — 70% */}
 						<div className=' pr-2'>
 							<h1 className='text-2xl font-bold leading-tight drop-shadow-2xl'>
 								Qulay va farovon hayot uchun ideal shaharcha
@@ -185,19 +185,15 @@ export default function Hero() {
 							</p>
 						</div>
 
-						{/* RIGHT — 30% */}
 						<div className='flex flex-col items-center gap-3'>
-							<a
-								href='tel:1361'
-								className='w-12 h-12 rounded-full bg-orange-500 flex items-center justify-center shadow-lg active:scale-95 transition'
-							>
+							<div className='w-12 h-12 rounded-full bg-orange-500 flex items-center justify-center shadow-lg active:scale-95 transition'>
 								<MessageSquareText size={20} className='text-white' />
-							</a>
+							</div>
 							<a
-								href='tel:1361'
-								className='w-12 h-12 rounded-full bg-orange-500 flex items-center justify-center shadow-lg active:scale-95 transition'
+								href='tel:+998785559090'
+								className='w-12 h-12 rounded-full bg-orange-500 flex items-center justify-center shadow-lg active:scale-95 transition '
 							>
-								<Phone size={20} className='text-white' />
+								<PhoneCall size={20} className='text-white' />
 							</a>
 						</div>
 					</div>
@@ -205,13 +201,6 @@ export default function Hero() {
 						Honadon rejalashtirish
 					</Button>
 				</div>
-
-				{/* CTA BUTTON — FULL WIDTH */}
-				{/* <div className='md:hidden absolute left-0 right-0 bottom-20 z-20 px-6'>
-					<button className='w-full rounded-full bg-green-700 py-4 text-base font-semibold text-white shadow-md active:scale-[0.98] transition'>
-						Rejalashtirishni tanlash
-					</button>
-				</div> */}
 			</div>
 			<AnimatePresence>
 				{open && (
@@ -259,10 +248,10 @@ export default function Hero() {
 								{/* LINKS */}
 								<nav className='mt-10 flex flex-col gap-6 text-lg font-medium text-gray-800'>
 									<a onClick={() => setOpen(false)} href='#projects'>
-										Loyihalar
+										Loyiha haqida
 									</a>
 									<a onClick={() => setOpen(false)} href='#about'>
-										Biz haqimizda
+										Loyiha joylashuvi
 									</a>
 									<a onClick={() => setOpen(false)} href='#news'>
 										Yangiliklar
@@ -278,10 +267,10 @@ export default function Hero() {
 										href='tel:+998712007400'
 										className='flex items-center justify-center gap-3
 										w-full py-[6px] rounded-2xl
-										bg-orange-500 text-white text-lg font-semibold
+										bg-orange-500 text-white  font-semibold
 										active:scale-95 transition'
 									>
-										<Phone />
+										<Phone size={20} />
 										Qo‘ng‘iroq qilish
 									</a>
 								</div>
