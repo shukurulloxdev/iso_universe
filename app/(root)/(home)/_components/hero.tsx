@@ -277,7 +277,7 @@ export default function Hero() {
 				{/* ================= DESKTOP HERO (ORIGINAL) ================= */}
 				<div className='relative z-10 max-w-6xl h-full mx-auto max-md:hidden flex items-center justify-between'>
 					{/* Left */}
-					<div>
+					<div className='w-[50%]'>
 						<h1 className='text-5xl font-bold leading-tight font-lexend text-[#263640]'>
 							<span>
 								{text}
@@ -314,7 +314,7 @@ export default function Hero() {
 					</div>
 
 					{/* Right */}
-					<div className='self-end'>
+					<div className='self-end w-[50%] flex justify-end '>
 						<Image
 							src='/builders/hero-img.png'
 							alt='Construction workers'
