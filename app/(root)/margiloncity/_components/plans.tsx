@@ -13,7 +13,7 @@ const contentVariants = {
 
 function Plans() {
 	return (
-		<div className='max-w-7xl mx-auto max-md:py-4 max-md:px-4'>
+		<div className='max-w-7xl mx-auto mt-4 max-md:py-4 max-md:px-4'>
 			<Tabs defaultValue='hammasi'>
 				<div className='flex max-md:flex-col items-center justify-between'>
 					<h1 className='md:text-4xl scale-y-95 text-2xl  text-gray-900 font-bold'>
