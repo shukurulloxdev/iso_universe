@@ -1,11 +1,11 @@
 import Image from 'next/image'
 
-function Decarative() {
+function Decarative({ img }: { img: string }) {
 	return (
-		<div className='relative  w-full h-[500px]'>
+		<div className='relative w-full md:h-[500px] h-[400px]'>
 			<Image
-				src={'/margiloncity/homes/decaration.png'}
-				alt='salom'
+				src={img}
+				alt='uy'
 				fill
 				className='object-cover'
 			/>

@@ -120,6 +120,7 @@ import Image from 'next/image'
 import { useForm } from 'react-hook-form'
 import InputMask from 'react-input-mask'
 import z from 'zod'
+
 export default function SendMessage() {
 	const form = useForm<z.infer<typeof sendBotSchema>>({
 		resolver: zodResolver(sendBotSchema),
@@ -173,7 +174,7 @@ export default function SendMessage() {
 	}
 
 	return (
-		<section className='bg-[#F7F7F7] py-8 max-md:px-4'>
+		<section className='md:py-12 py-8 max-md:px-4 '>
 			<Card className='mx-auto max-w-7xl overflow-hidden rounded-xl shadow-xl'>
 				<div className='grid md:grid-cols-2'>
 					{/* IMAGE */}

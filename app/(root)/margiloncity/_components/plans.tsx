@@ -1,174 +1,6 @@
-// import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-// import Image from 'next/image'
-
-// function Plans() {
-// 	return (
-// 		<div className='max-w-7xl mx-auto py-12'>
-// 			<Tabs defaultValue='hammasi'>
-// 				<div className='flex items-center justify-between'>
-// 					<h1 className='text-4xl font-semibold font-lexend'>
-// 						Xonadonlarning o‘ylangan rejalari
-// 					</h1>
-
-// 					<TabsList className='bg-gradient-to-b border from-yellow-50 via-yellow-100 to-yellow-50 text-black px-6 py-8 rounded-3xl  shadow-2xl flex items-center gap-4 '>
-// 						<TabsTrigger
-// 							value='hammasi'
-// 							className='text-lg
-//               px-4 py-2
-//               rounded-2xl text-black
-// 							shadow-md
-//               hover:-translate-y-0.5 hover:shadow-lg
-//               data-[state=active]:bg-orange-200
-//               data-[state=active]:text-black
-//               data-[state=active]:font-semibold
-//               data-[state=active]:scale-105
-//               data-[state=active]:shadow-xl
-//               /* animatsiya */
-//               transform
-//               transition-all
-//               duration-300
-//               ease-[cubic-bezier(.4,2,.6,1)]'
-// 						>
-// 							Hammasi
-// 						</TabsTrigger>
-// 						<TabsTrigger
-// 							value='ikkixonali'
-// 							className='text-lg
-//               px-4 py-2
-//               rounded-2xl text-black
-// 							shadow-md
-//               hover:-translate-y-0.5 hover:shadow-lg
-//               data-[state=active]:bg-orange-200
-//               data-[state=active]:text-black
-//               data-[state=active]:font-semibold
-//               data-[state=active]:scale-105
-//               data-[state=active]:shadow-xl
-//               /* animatsiya */
-//               transform
-//               transition-all
-//               duration-300
-//               ease-[cubic-bezier(.4,2,.6,1)]'
-// 						>
-// 							2-xonali
-// 						</TabsTrigger>
-// 						<TabsTrigger
-// 							value='uchxonali'
-// 							className='text-lg
-//               px-4 py-2
-//               rounded-2xl text-black
-// 							shadow-md
-//               hover:-translate-y-0.5 hover:shadow-lg
-//               data-[state=active]:bg-orange-200
-//               data-[state=active]:text-black
-//               data-[state=active]:font-semibold
-//               data-[state=active]:scale-105
-//               data-[state=active]:shadow-xl
-//               /* animatsiya */
-//               transform
-//               transition-all
-//               duration-300
-//               ease-[cubic-bezier(.4,2,.6,1)]'
-// 						>
-// 							3-xonali
-// 						</TabsTrigger>
-// 					</TabsList>
-// 				</div>
-
-// 				<div className='mt-10'>
-// 					<TabsContent value='hammasi'>
-// 						<div className='grid grid-cols-4 gap-6'>
-// 							<div className='relative w-full h-96'>
-// 								<Image
-// 									src={'/margiloncity/homes/1hona2.jpg'}
-// 									alt='d2qwx'
-// 									className='rounded-xl shadow-lg'
-// 									fill
-// 								/>
-// 							</div>
-// 							<div className='relative w-full h-96'>
-// 								<Image
-// 									src={'/margiloncity/homes/1hona.jpg'}
-// 									alt='d2qwx'
-// 									fill
-// 									className='rounded-xl shadow-lg'
-// 								/>
-// 							</div>
-// 							<div className='relative w-full h-96'>
-// 								<Image
-// 									src={'/margiloncity/homes/2hona.jpg'}
-// 									alt='d2qwx'
-// 									fill
-// 									className='rounded-xl shadow-lg'
-// 								/>
-// 							</div>
-// 							<div className='relative w-full h-96'>
-// 								<Image
-// 									src={'/margiloncity/homes/2hona2.jpg'}
-// 									alt='d2qwx'
-// 									className='rounded-xl shadow-lg'
-// 									fill
-// 								/>
-// 							</div>
-// 						</div>
-// 					</TabsContent>
-
-// 					<TabsContent value='ikkixonali'>
-// 						<div className='flex items-center justify-center gap-6'>
-// 							<div className='relative h-96 w-80'>
-// 								<Image
-// 									src={'/margiloncity/homes/1hona2.jpg'}
-// 									alt='d2qwx'
-// 									className='rounded-xl shadow-lg'
-// 									fill
-// 								/>
-// 							</div>
-// 							<div className='relative  h-96 w-80'>
-// 								<Image
-// 									src={'/margiloncity/homes/1hona.jpg'}
-// 									alt='d2qwx'
-// 									fill
-// 									className='rounded-xl shadow-lg'
-// 								/>
-// 							</div>
-// 						</div>
-// 					</TabsContent>
-// 					<TabsContent value='uchxonali'>
-// 						<div className='flex items-center justify-center gap-6'>
-// 							<div className='relative h-96 w-80'>
-// 								<Image
-// 									src={'/margiloncity/homes/2hona3.jpg'}
-// 									alt='d2qwx'
-// 									className='rounded-xl shadow-lg'
-// 									fill
-// 								/>
-// 							</div>
-// 							<div className='relative  h-96 w-80'>
-// 								<Image
-// 									src={'/margiloncity/homes/2hona2.jpg'}
-// 									alt='d2qwx'
-// 									className='rounded-xl shadow-lg'
-// 									fill
-// 								/>
-// 							</div>
-// 							<div className='relative  h-96 w-80'>
-// 								<Image
-// 									src={'/margiloncity/homes/3hona2.jpg'}
-// 									alt='d2qwx'
-// 									className='rounded-xl shadow-lg'
-// 									fill
-// 								/>
-// 							</div>
-// 						</div>
-// 					</TabsContent>
-// 				</div>
-// 			</Tabs>
-// 		</div>
-// 	)
-// }
-
-// export default Plans
 'use client'
 
+import { Separator } from '@/components/ui/separator'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { AnimatePresence, motion } from 'framer-motion'
 import Image from 'next/image'
@@ -181,13 +13,18 @@ const contentVariants = {
 
 function Plans() {
 	return (
-		<div className='max-w-7xl mx-auto py-12'>
+		<div className='max-w-7xl mx-auto max-md:py-4 max-md:px-4'>
 			<Tabs defaultValue='hammasi'>
 				<div className='flex max-md:flex-col items-center justify-between'>
-					<h1 className='text-4xl font-semibold font-lexend'>
-						Xonadonlarning o‘ylangan rejalari
+					<h1 className='md:text-4xl scale-y-95 text-2xl  text-gray-900 font-bold'>
+						Xonadonlarning rejalari
+						{/* <span className='underline text-xl text-blue-500 font-normal font-work'>
+							Batafsil
+						</span> */}
 					</h1>
-					<TabsList className='flex gap-2   py-6 rounded-2xl bg-gradient-to-b from-yellow-50 via-yellow-100 to-yellow-50 shadow-xl border'>
+					{/* bg-gradient-to-b from-yellow-50 via-yellow-100 to-yellow-50 */}
+					<Separator className='md:hidden' />
+					<TabsList className='flex gap-2  py-6 mt-4 rounded-2xl bg-gradient-to-b from-orange-400 via-orange-200 to-orange-400 shadow-2xl border'>
 						<TabsTrigger
 							value='hammasi'
 							className='tabs-trigger-modern text-lg'
@@ -209,7 +46,7 @@ function Plans() {
 					</TabsList>
 				</div>
 
-				<div className='mt-10'>
+				<div className='mt-8'>
 					{/* HAMMASI */}
 					<TabsContent value='hammasi'>
 						<AnimatePresence mode='wait'>
@@ -221,9 +58,9 @@ function Plans() {
 								exit='exit'
 								transition={{ duration: 0.4, ease: 'easeOut' }}
 							>
-								<div className='grid grid-cols-4 gap-6'>
+								<div className='grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6'>
 									{['1hona2', '1hona', '2hona', '2hona2'].map(img => (
-										<div key={img} className='relative w-full h-96'>
+										<div key={img} className='relative w-full h-60 md:h-96'>
 											<Image
 												src={`/margiloncity/homes/${img}.jpg`}
 												alt='home'
@@ -248,9 +85,12 @@ function Plans() {
 								exit='exit'
 								transition={{ duration: 0.4, ease: 'easeOut' }}
 							>
-								<div className='flex items-center justify-center gap-6'>
+								<div className='grid grid-cols-2 gap-4 md:flex md:items-center md:justify-center md:gap-6'>
 									{['1hona2', '1hona'].map(img => (
-										<div key={img} className='relative h-96 w-80'>
+										<div
+											key={img}
+											className='relative h-60 w-full md:h-96 md:w-80'
+										>
 											<Image
 												src={`/margiloncity/homes/${img}.jpg`}
 												alt='home'
@@ -275,9 +115,12 @@ function Plans() {
 								exit='exit'
 								transition={{ duration: 0.4, ease: 'easeOut' }}
 							>
-								<div className='flex items-center justify-center gap-6'>
+								<div className='grid grid-cols-2 gap-4 md:flex md:items-center md:justify-center md:gap-6'>
 									{['2hona3', '2hona2', '3hona2'].map(img => (
-										<div key={img} className='relative h-96 w-80'>
+										<div
+											key={img}
+											className='relative w-full h-60 md:h-96 md:w-80'
+										>
 											<Image
 												src={`/margiloncity/homes/${img}.jpg`}
 												alt='home'

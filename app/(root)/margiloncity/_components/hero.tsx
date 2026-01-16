@@ -38,7 +38,7 @@ export default function Hero() {
 
 	return (
 		<>
-			<div className='relative h-screen w-full max-md:h-[77vh] overflow-hidden'>
+			<div className='relative h-screen w-full max-md:h-[71vh] overflow-hidden'>
 				{/* ===== BACKGROUND SLIDER ===== */}
 				<AnimatePresence mode='sync'>
 					<motion.div
