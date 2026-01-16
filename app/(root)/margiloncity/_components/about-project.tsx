@@ -76,19 +76,16 @@ export default function LocationCard() {
 								<p className='text-gray-600'>
 									Margilon city — shahar markazida joylashgan, zamonaviy
 									arxitektura va qulay yashash sharoitlari bilan ajralib
-									turadigan turar-joy majmuasi. Loyihaning har bir jabhasi
-									hayotingizni yanada farovon va qulay qilish uchun
-									moʻljallangan.
+									turadigan turar-joy majmuasi.
 								</p>
 								<p className='text-gray-600'>
 									Majmua atrofida tabiat bilan uygʻun yashashni taʼminlovchi
 									yashil hududlar va ochiq maydonlar mavjud. Bu joylarda siz va
-									oilangiz uchun dam olish, bolalar uchun esa xavfsiz oʻyin
-									maydonchalari taqdim etiadi.
+									oilangiz uchun dam olish,
 								</p>
 							</div>
 						</motion.div>
-
+						{/* 
 						<motion.div
 							className='grid grid-cols-2 gap-7 md:mt-8 mt-5'
 							initial={{ opacity: 0, x: 100 }}
@@ -102,6 +99,28 @@ export default function LocationCard() {
 										<Image src={item.image} alt='lats' fill />
 									</div>
 									<h1 className='md:max-w-[150px] text-sm md:text-xl font-roboto font-bold text-gray-800 tracking-wider'>
+										{item.title}
+									</h1>
+								</div>
+							))}
+						</motion.div> */}
+						<motion.div
+							className='grid grid-cols-2 gap-4 mt-5'
+							initial={{ opacity: 0, x: 100 }}
+							whileInView={{ opacity: 1, x: 0 }}
+							viewport={{ once: true, amount: 0.5 }}
+							transition={{ duration: 1, ease: 'easeOut', delay: 0.7 }}
+						>
+							{aboutProject.map(item => (
+								<div
+									key={item.image}
+									className='flex items-center gap-4 p-4 rounded-xl border border-gray-200 hover:shadow-md transition bg-white'
+								>
+									<div className='relative w-12 h-12 md:w-14 md:h-14 shrink-0'>
+										<Image src={item.image} alt='' fill />
+									</div>
+
+									<h1 className='text-sm md:text-lg font-bold text-gray-800 leading-snug'>
 										{item.title}
 									</h1>
 								</div>
@@ -179,7 +198,7 @@ export default function LocationCard() {
 				</div>
 
 				{/* 3 */}
-				<div className='grid grid-cols-2 gap-20 items-center md:mt-20 mt-6 max-lg:grid-cols-1'>
+				<div className='grid grid-cols-2 md:gap-20 gap-8 items-center md:mt-20 mt-6 max-lg:grid-cols-1'>
 					<motion.div
 						className='relative self-start order-2 lg:order-1'
 						initial={{ opacity: 0, x: -100 }}
@@ -194,15 +213,24 @@ export default function LocationCard() {
 									alt='Nurafshon'
 									fill
 									priority
-									className='object-cover rounded-tr-[200px] '
+									className='object-cover rounded-tr-[100px] '
 								/>
 							</div>
 
-							<div className='absolute -bottom-10 left-10 right-10 text-center bg-gradient-to-b border from-yellow-50 via-yellow-100 to-yellow-50 text-black p-6 rounded-3xl  shadow-2xl '>
-								<p className='text-base leading-relaxed font-work '>
-									<span className='font-semibold text-xl'>Margilon city</span> –
-									anʼanaviy va zamonaviy arxitektura usullaridan foydalangan
-									holda barpo etilayotgan sanʼat .
+							<div
+								className='relative
+        -mt-8 bg-orange-500
+        p-5
+				rounded-br-[100px]
+         rounded-bl-xl
+        shadow-xl'
+							>
+								<p className='text-[13px] md:text-sm leading-relaxed font-work text-white '>
+									<span className='font-semibold text-[16px]'>
+										Margilon city
+									</span>{' '}
+									– anʼanaviy va zamonaviy arxitektura usullaridan foydalangan
+									holda barpo etilayotgan shaharcha.
 								</p>
 							</div>
 						</div>
@@ -217,7 +245,7 @@ export default function LocationCard() {
 							viewport={{ once: true, amount: 0.5 }}
 							transition={{ duration: 1, ease: 'easeOut', delay: 0.5 }}
 						>
-							<h1 className='md:text-4xl text-2xl text-gray-900 leading-relaxed font-bold'>
+							<h1 className='md:text-4xl scale-y-95 text-2xl  text-gray-900 font-bold'>
 								Majmua arxitekturasi
 							</h1>
 
@@ -234,7 +262,7 @@ export default function LocationCard() {
 							</div>
 						</motion.div>
 
-						<motion.div
+						{/* <motion.div
 							className='w-full grid md:grid-cols-3 gap-6 md:mt-16 mt-6'
 							initial={{ opacity: 0, x: 100 }}
 							whileInView={{ opacity: 1, x: 0 }}
@@ -274,7 +302,46 @@ export default function LocationCard() {
 										fill
 									/>
 								</div>
-								<h1 className='md:max-w-[150px] self-center text-xl font-roboto font-bold text-gray-800 tracking-wider'>
+								<h1 className='md:max-w-[150px]  text-sm md:text-xl font-roboto font-bold text-gray-800 tracking-wider'>
+									Yevropa fasad materiallari
+								</h1>
+							</div>
+						</motion.div> */}
+						<motion.div
+							className='grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mt-4 md:mt-16'
+							initial={{ opacity: 0, x: 100 }}
+							whileInView={{ opacity: 1, x: 0 }}
+							viewport={{ once: true, amount: 0.5 }}
+							transition={{ duration: 1, ease: 'easeOut', delay: 0.6 }}
+						>
+							{/* Card */}
+							<div className='flex md:flex-col items-center gap-4 p-4 rounded-xl border border-gray-200 hover:shadow-md transition'>
+								<div className='relative w-14 h-14 md:w-24 md:h-24 shrink-0'>
+									<Image
+										src='/margiloncity/icons/architectural.png'
+										alt=''
+										fill
+									/>
+								</div>
+								<h1 className='text-base md:text-xl font-bold text-gray-800 text-left md:text-center'>
+									Qulay rejalashtirish
+								</h1>
+							</div>
+
+							<div className='flex md:flex-col items-center gap-4 p-4 rounded-xl border border-gray-200 hover:shadow-md transition'>
+								<div className='relative w-14 h-14 md:w-24 md:h-24 shrink-0'>
+									<Image src='/margiloncity/icons/balcony.png' alt='' fill />
+								</div>
+								<h1 className='text-base md:text-xl font-bold text-gray-800 text-left md:text-center'>
+									Qulay balkonlar
+								</h1>
+							</div>
+
+							<div className='flex md:flex-col items-center gap-4 p-4 rounded-xl border border-gray-200 hover:shadow-md transition'>
+								<div className='relative w-14 h-14 md:w-24 md:h-24 shrink-0'>
+									<Image src='/margiloncity/icons/material.png' alt='' fill />
+								</div>
+								<h1 className='text-base md:text-xl font-bold text-gray-800 text-left md:text-center'>
 									Yevropa fasad materiallari
 								</h1>
 							</div>

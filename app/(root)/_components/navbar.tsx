@@ -44,16 +44,16 @@ function Navbar() {
 
 					{/* DESKTOP NAV */}
 					<nav className='hidden md:flex items-center gap-8 text-sm text-gray-700'>
-						<a href='#projects' className='hover:text-orange-600 transition'>
+						<a href='#loyhalar' className='hover:text-orange-600 transition'>
 							Loyihalar
 						</a>
-						<a href='#about' className='hover:text-orange-600 transition'>
-							Biz haqimizda
+						<a href='#qulayliklar' className='hover:text-orange-600 transition'>
+							Afzalliklar
 						</a>
-						<a href='#news' className='hover:text-orange-600 transition'>
-							Yangiliklar
+						<a href='#joylashuv' className='hover:text-orange-600 transition'>
+							Sotuv ofisi
 						</a>
-						<a href='#reviews' className='hover:text-orange-600 transition'>
+						<a href='#sharhlar' className='hover:text-orange-600 transition'>
 							Sharhlar
 						</a>
 					</nav>

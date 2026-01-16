@@ -59,8 +59,7 @@ export default function Hero() {
 								className='object-cover object-center max-md:object-cover top scale-105'
 							/>
 						</div>
-						<div className='max-md:hidden absolute inset-0 bg-black/60' />
-						<div className='md:hidden absolute inset-0 bg-[rgba(0,0,20,0.5)]' />
+						<div className=' absolute inset-0 bg-[rgba(0,0,15,0.3)]' />
 					</motion.div>
 				</AnimatePresence>
 
